@@ -1,3 +1,5 @@
 ## 0.1.0 - First Release
-* Every feature added
-* Every bug fixed
+####Features
+* Basic snippets for patch config files
+####Bug Fixes
+* n/a

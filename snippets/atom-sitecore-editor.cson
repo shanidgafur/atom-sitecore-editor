@@ -1,16 +1,31 @@
 '.text.xml':
-  'setting':
+  'sitecore-patch-body':
+    'prefix': 'sitecore-patch-body'
+    'body': """
+      <?xml version="1.0" encoding="utf-8" ?>
+      <configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+        <sitecore>
+
+        </sitecore>
+      </configuration>
+    """
+  'sitecore-setting':
     'prefix': 'setting'
     'body': """
       <setting name="xyz" value="abc" patch:instead="*[@name='xyz']" />
     """
-  'patch-delete':
+  'sitecore-patch-delete':
     'prefix': 'patch-delete'
     'body': """
       <patch:delete />
     """
-  'patch-before':
+  'sitecore-patch-before':
     'prefix': 'patch-before'
     'body': """
       patch:before="*[@name='xyz']"
+    """
+  'sitecore-patch-after':
+    'prefix': 'patch-after'
+    'body': """
+      patch:after="*[@name='xyz']"
     """

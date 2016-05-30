@@ -12,7 +12,7 @@ describe "AtomSitecoreEditor", ->
     workspaceElement = atom.views.getView(atom.workspace)
     activationPromise = atom.packages.activatePackage('atom-sitecore-editor')
 
-  describe "when the atom-sitecore-editor:toggle event is triggered", ->
+  describe "when the atom-sitecore-editor:about event is triggered", ->
     it "hides and shows the modal panel", ->
       # Before the activation event the view is not on the DOM, and no panel
       # has been created
@@ -20,7 +20,7 @@ describe "AtomSitecoreEditor", ->
 
       # This is an activation event, triggering it will cause the package to be
       # activated.
-      atom.commands.dispatch workspaceElement, 'atom-sitecore-editor:toggle'
+      atom.commands.dispatch workspaceElement, 'atom-sitecore-editor:about'
 
       waitsForPromise ->
         activationPromise
@@ -33,7 +33,7 @@ describe "AtomSitecoreEditor", ->
 
         atomSitecoreEditorPanel = atom.workspace.panelForItem(atomSitecoreEditorElement)
         expect(atomSitecoreEditorPanel.isVisible()).toBe true
-        atom.commands.dispatch workspaceElement, 'atom-sitecore-editor:toggle'
+        atom.commands.dispatch workspaceElement, 'atom-sitecore-editor:about'
         expect(atomSitecoreEditorPanel.isVisible()).toBe false
 
     it "hides and shows the view", ->
@@ -49,7 +49,7 @@ describe "AtomSitecoreEditor", ->
 
       # This is an activation event, triggering it causes the package to be
       # activated.
-      atom.commands.dispatch workspaceElement, 'atom-sitecore-editor:toggle'
+      atom.commands.dispatch workspaceElement, 'atom-sitecore-editor:about'
 
       waitsForPromise ->
         activationPromise
@@ -58,5 +58,5 @@ describe "AtomSitecoreEditor", ->
         # Now we can test for view visibility
         atomSitecoreEditorElement = workspaceElement.querySelector('.atom-sitecore-editor')
         expect(atomSitecoreEditorElement).toBeVisible()
-        atom.commands.dispatch workspaceElement, 'atom-sitecore-editor:toggle'
+        atom.commands.dispatch workspaceElement, 'atom-sitecore-editor:about'
         expect(atomSitecoreEditorElement).not.toBeVisible()

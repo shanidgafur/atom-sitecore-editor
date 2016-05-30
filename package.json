@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "description": "A set of tools and snippets for Sitecore config files",
   "keywords": [
+    "sitecore"
   ],
   "activationCommands": {
-    "atom-workspace": "atom-sitecore-editor:toggle",
     "atom-workspace": "atom-sitecore-editor:about"
   },
   "repository": "https://github.com/shanidgafur/atom-sitecore-editor",
