@@ -1,0 +1,16 @@
+'.text.xml':
+  'setting':
+    'prefix': 'setting'
+    'body': """
+      <setting name="xyz" value="abc" patch:instead="*[@name='xyz']" />
+    """
+  'patch-delete':
+    'prefix': 'patch-delete'
+    'body': """
+      <patch:delete />
+    """
+  'patch-before':
+    'prefix': 'patch-before'
+    'body': """
+      patch:before="*[@name='xyz']"
+    """

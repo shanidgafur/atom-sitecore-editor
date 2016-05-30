@@ -1,0 +1,25 @@
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'Toggle atom-sitecore-editor'
+      'command': 'atom-sitecore-editor:toggle'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'atom-sitecore-editor'
+      'submenu': [
+        {
+          'label': 'Toggle'
+          'command': 'atom-sitecore-editor:toggle'
+        },
+        {
+          'label': 'Add Config'
+          'command': 'atom-sitecore-editor:addConfig'
+        }
+      ]
+    ]
+  }
+]
