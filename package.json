@@ -1,7 +1,7 @@
 {
   "name": "atom-sitecore-editor",
   "main": "./lib/atom-sitecore-editor",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A set of tools and snippets for Sitecore config files",
   "keywords": [
     "sitecore"
